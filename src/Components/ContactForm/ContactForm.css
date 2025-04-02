@@ -1,0 +1,32 @@
+.contect-us-input{
+    border: 2px solid #003366;
+    background-color: transparent;
+    color: #003366;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.contact-info{
+    border-radius: 15px;
+    padding: 30px;
+    background-color:#0B2545 !important;
+    color: white;
+    font-weight: 600;
+    text-align: left !important;
+    margin-top: 0 !important;
+ 
+}
+
+ .Contact-Us{
+    color: #003366 !important;
+ }
+@media (max-width:768px){
+    .contact-info {
+        margin-top: 15px;
+        position: relative;
+        left: 50%;
+margin-top: 40px !important;
+        transform: translate(-50%);
+    }
+  
+}

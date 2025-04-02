@@ -1,0 +1,28 @@
+.chef-img {
+    width: 60%;
+    margin-top: -50px;
+    border-radius: 15px;
+}
+
+.bg-primary {
+    background-color: #003366 !important; /* or your desired dark blue */
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .chef-img {
+        width: 100%;
+        margin-top: -30px;
+    }
+}
+
+.Join-btn{
+    border-radius: 5px ;
+    border: 2px solid #003366;
+    color: #003366;
+    padding: 10px;
+}

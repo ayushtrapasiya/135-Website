@@ -1,0 +1,42 @@
+.areas-section {
+    background-color: #0a3d62;
+    color: white;
+    background-image: url('/src/assets/Images/About-right.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.areas-section h2 {
+
+    font-size: 2rem;
+}
+
+.areas-section p {
+    font-size: 0.9rem;
+}
+
+.areas-section ul li {
+    margin-bottom: 5px;
+}
+.list-unstyled2{
+    text-align: left;
+    color: white;
+    padding: 0;
+    font-weight: bold;
+
+}
+.list-unstyled2 > li {
+    font-size: 19px;
+    list-style: none;
+}
+@media(max-width:700px){
+    .list-unstyled2 > li {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold !important;
+        list-style: none;
+    }
+}
+
+ 
