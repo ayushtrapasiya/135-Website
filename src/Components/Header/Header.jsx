@@ -102,10 +102,8 @@ export default function Header() {
                 style={{ cursor: "pointer" }}
               />
               <FaInstagram className="fs-3" />
-           
             </div>
           </ul>
-
           {/* Icons (User & Cart) - Desktop */}
           <div className="header-icons">
             <FaWhatsapp  
