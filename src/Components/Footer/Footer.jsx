@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -31,12 +32,18 @@ const Footer = () => {
           <p>Sunday: Closed</p>
         </div>
 
-        <div className="footer-section links small-section  flex-fill">
+        <div className="footer-section links small-section">
           <h5>Quick Links</h5>
           <ul>
-            <li><a href="#">Home</a></li>
+            <Link to={"/"}>
+            <li className="text-light">Home</li>
+            </Link>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Menu</a></li>
+            <li>
+ 
+    Our Menu
+   
+</li>
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
@@ -44,16 +51,15 @@ const Footer = () => {
 
       {/* Bottom Section - Policies and Copyright */}
       <div className="footer-bottom centered">
-        <div className="policy-links d-md-flex gap-1">
-          <Link to={"/PrivacyPolicy"}> <a href="#">Privacy Policy</a> |</Link>
-          
-          <Link to={"/CancellationPolicy"}>
-          <a href="#">Cancellation Policy</a> | 
+        <div className="policy-links d-md-flex gap-1 ">
+          <Link to={"/PrivacyPolicy"} className="text-light"> Privacy Policy |</Link>
+          <Link to={"/CancellationPolicy"} className="text-light">
+          Cancellation Policy | 
           </Link>
-          <Link to={"/TermsandConditions"}> <a href="#">Terms & Conditions</a></Link>
+          <Link to={"/TermsandConditions"} className="text-light"> Terms & Conditions</Link>
         </div>
-        <p>COPYRIGHT © 2025 <strong>135 DEGREES</strong></p>
-        <p>DEVELOPED BY <strong>NEXORA TECH</strong></p>
+        <p style={{fontSize:"13px"}}>COPYRIGHT © 2025 <strong>135 DEGREES</strong></p>
+        <p style={{fontSize:"13px"}}>DEVELOPED BY <strong>NEXORA TECH</strong></p>
       </div>
     </footer>
   );

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './AboutUS.css'
 import AOS from "aos";
+import about from '/src/assets/Images/About-img.jpg'
 import "aos/dist/aos.css"; 
 const AboutUs = () => {
 
@@ -12,18 +13,18 @@ const AboutUs = () => {
         }, []);
   return (
     <div className="container my-5">
-      <div className="row align-items-stretch about-contaier">
+      <div className="row align-items-stretch about-contaier"  data-aos="fade-up">
         {/* Left Side - Image */}
-        <div className="col-lg-5 d-flex align-items-stretch p-0 col-11 "  data-aos="fade-right">
+        <div className="col-lg-5 d-flex align-items-stretch p-0 col-11 " >
         <img
-           src="/src/assets/Images/About-img.jpg"
+           src={about}
            alt="Healthy Food"
            className="about-left-image animate__animated animate__fadeInLeft"
           
         />
         </div>
         {/* Right Side - Text */}
-        <div className="col-lg-5 d-flex align-items-stretch p-0 col-11 " data-aos="fade-left">
+        <div className="col-lg-5 d-flex align-items-stretch p-0 col-11 "  >
           <div className="p-5 text-white  shadow-sm w-100 d-flex flex-column justify-content-center About-right-part">
             <h2 className="fw-bold text-light">About 135 Degrees</h2>
             <p>

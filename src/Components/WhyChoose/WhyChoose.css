@@ -1,8 +1,22 @@
 
 
-.main-why-ontainer{
+.main-why-ontainer {
     background: url('/src/assets/Images/fresh-img.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
+
+.main-why-ontainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.749); /* Adjust opacity for better text visibility */
+}
+
 .why-container {
    padding-top: 40px;
    padding-bottom: 40px;

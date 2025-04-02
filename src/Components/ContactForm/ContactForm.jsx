@@ -68,11 +68,34 @@ const ContactForm = () => {
           </form>
         </div>
         <div className="col-md-5 contact-info col-11">
-          <div className="info-box">
-            <p><IoLocation className="fs-2" /> &nbsp;&nbsp;D/45, Titanium City Center, 100 Feet Road, Satellite, Ahmedabad - 380 015.</p>
-            <p><IoCall className="fs-2" /> &nbsp;&nbsp; ‪+91 78638 70341‬</p>
-            <p><TbWorld className="fs-2" />&nbsp;&nbsp; www.135degrees.in</p>
-            <p><MdEmail className="fs-2" />&nbsp;&nbsp; care@135degrees.in</p>
+          <div className="info-box p-3">
+            <p>
+              <IoLocation className="fs-2" /> &nbsp;&nbsp;D/45, Titanium City Center, 100 Feet Road, Satellite, Ahmedabad - 380 015.
+            </p>
+            <br />
+            <br />
+            <p>
+              <IoCall className="fs-2" /> &nbsp;&nbsp;
+              <a href="tel:+917863870341" style={{ textDecoration: "none", color: "white" }}>
+                ‪+91 78638 70341‬
+              </a>
+            </p>
+            <br />
+            <br />
+            <p>
+              <TbWorld className="fs-2" />&nbsp;&nbsp;
+              <a href="https://www.135degrees.in" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white"}}>
+                www.135degrees.in
+              </a>
+            </p>
+            <br />
+            <br />
+            <p>
+              <MdEmail className="fs-2" />&nbsp;&nbsp;
+              <a href="mailto:care@135degrees.in" style={{ textDecoration: "none", color: "white" }}>
+                care@135degrees.in
+              </a>
+            </p>
           </div>
         </div>
       </div>

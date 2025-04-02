@@ -1,197 +1,69 @@
 .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-  .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 100%;
-    opacity: 0;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  }
-  
-  .slide.active {
-    transform: translateX(0);
-    opacity: 1;
-    left: 0;
-  }
-  
-  .slide.prev {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  
-  .slide.next {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  
-  .background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    /* background: rgba(0, 0, 0, 0.5); */
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 800px;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .explore-btn {
-    background-color : transparent;
-    border: 2px solid white !important;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-  }
-  
-   
-  .indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
- 
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50%;
-    opacity: 0.5;
-    cursor: pointer;
-    transition: opacity 0.3s;
-  
-  }
-  
-  .active-dot {
-    opacity: 1;
-  }
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  opacity: -1;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
 
-  /* Responsive Styles */
-  @media (max-width: 900px) {
-    .carousel-container {
-        height: 50vh;
-    }
-    .content {
-      width: 85%;
-      padding: 18px;
-    }
-    h2 {
-      font-size: 2.2rem;
-    }
-    h3 {
-      font-size: 1.6rem;
-    }
-    p {
-      font-size: 1.1rem;
-    }
-  }
-  
-  @media (max-width: 700px) {
-    .carousel-container {
-      height: 50vh;
-    }
-    .content {
-      width: 88%;
-      padding: 16px;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-    .explore-btn {
-      font-size: 0.95rem;
-      padding: 9px 18px;
-    }
-  }
-  @media (max-width: 500px) {
-    .carousel-container {
-        height: 80vh;
-        padding: 10px;
-    }
-    .content {
-      width: 90%;
-      padding: 14px;
-    }
-    h2 {
-      font-size: 1.8rem;
-    }
-    h3 {
-      font-size: 1.3rem;
-    }
-    p {
-      font-size: 0.95rem;
-    }
-    .explore-btn {
-      font-size: 0.9rem;
-      padding: 8px 16px;
-    }
-  }
-  
-  @media (max-width: 350px) {
-    .carousel-container {
-        height: 60vh;
-    }
-    .content {
-      width: 95%;
-      padding: 10px;
-    }
-    h2 {
-      font-size: 1.6rem;
-    }
-    h3 {
-      font-size: 1.1rem;
-    }
-    p {
-      font-size: 0.85rem;
-    }
-    .explore-btn {
-      font-size: 0.8rem;
-      padding: 6px 12px;
-    }
-  }
+.slide.active {
+  transform: translateX(0);
+  opacity: 1;
+  left: 0;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* 🔹 Black Overlay for Video */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.596); /* Adjust opacity to control darkness */
+  z-index: 0;
+}
+
+/* 🔹 Content with High Visibility */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1; /* Ensures text appears above overlay */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text clearer */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1060px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}

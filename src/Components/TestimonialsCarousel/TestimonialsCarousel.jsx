@@ -45,21 +45,7 @@ const TestimonialsCarousel = () => {
                     <div>
                         <h4>{testimonials[current].author}</h4>
                         <small>{testimonials[current].position}</small>
-                        <div className="stars">
-                            {Array.from({ length: 5 }, (_, i) => (
-                                <span key={i}>{i < testimonials[current].rating ? '★' : '☆'}</span>
-                            ))}
-                        </div>
                     </div>
-                </div>
-                <div className="TestimonialsCarousel-dots">
-                    {testimonials.map((_, index) => (
-                        <span
-                            key={index}
-                            className={current === index ? "active" : ""}
-                            onClick={() => setCurrent(index)}
-                        ></span>
-                    ))}
                 </div>
             </div>
         </div>

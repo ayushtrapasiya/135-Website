@@ -10,7 +10,7 @@ import { Outlet } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop';
 export default function App() {
   return (
-    <div> 
+    <div className='main'> 
       <ScrollToTop />
       <Header/>
       <Outlet/>   
