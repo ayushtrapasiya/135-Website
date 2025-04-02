@@ -1,5 +1,5 @@
-export const SaladDetail= [
-    {
-
-    }
-]
+export const SaladDetail = [
+  {
+    "ajay": "a",
+  }
+];
