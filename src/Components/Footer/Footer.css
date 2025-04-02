@@ -44,6 +44,7 @@ margin: auto;
 .footer-section .footer-link {
  color: white;
   text-decoration: none;
+  flex: 1 0 auto !important;
 }
 
 .footer-section .footer-link:hover {
@@ -77,10 +78,13 @@ margin: auto;
   padding-top: 15px;
   margin-top: 20px;
   font-size: 14px;
+ 
 }
-
+.policy-links {
+  color: white !important;
+}
 .footer-bottom strong {
-  font-weight: bold;
+
 }
 
 /* Responsive Design */
@@ -92,10 +96,20 @@ margin: auto;
 
   .footer-section {
     margin-bottom: 20px;
+    
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+
+@media(max-width:397px){
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
   }
 }

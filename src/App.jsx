@@ -8,13 +8,17 @@ import 'animate.css';
 
 import { Outlet } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop';
+import CustomCursor from './Components/CustomCursor';
 export default function App() {
   return (
-    <div> 
+    <div className='main'> 
+    <div style={{ cursor: "none" }}>
+    <CustomCursor />
       <ScrollToTop />
       <Header/>
       <Outlet/>   
       <Footer/>
+      </div>
     </div>
   )
 }

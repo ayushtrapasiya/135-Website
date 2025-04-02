@@ -6,9 +6,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* mix-blend-mode; */
     justify-content: center;
-  background-color: #000103;
+    background-color: #000103;
+    position: relative;
+    z-index: 1;
+}
+
+/* Add an overlay */
+.testimonial-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: -1;
+}
+
+.testimonial-card {
+    position: relative;
+    z-index: 2; /* Ensure testimonial content stays above overlay */
 }
 
 h2 {

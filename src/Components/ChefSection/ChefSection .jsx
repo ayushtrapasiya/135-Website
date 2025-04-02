@@ -13,14 +13,14 @@ const ChefSection = () => {
     <div className="container my-5">
       <div className="row d-flex justify-content-senter align-items-center">
         {/* Left side */}
-        <div className="col-lg-6 d-flex justify-content-center mb-4 mb-lg-0" data-aos="fade-up">
+        <div className="col-lg-6 d-flex justify-content-center mb-4 mt-5 mb-lg-0" data-aos="fade-up">
           <img src={chefImage} alt="Chef" className="img-fluid chef-img " />
         </div>
 
         {/* Right side */}
         <div className="col-lg-5" style={{ color: "#134074" }} data-aos="fade-down">
           <h4 className="fw-bold d-flex align-items-center">
-            Join the <h1 className="text-primary fw-bold">135 Degrees</h1>{" "}
+            Join the <h1 className=" fw-bold">135 Degrees</h1>{" "}
           </h4>
           <h4 className="fw-bold">Lifestyle!</h4>
           <p className="fw-300 mt-3" style={{color:"#134074"}}>
@@ -45,9 +45,7 @@ const ChefSection = () => {
               <strong>● Hassle-Free –</strong> Healthy, hygienic, easy.
             </li>
           </ul>
-          <button className=" Join-btn mt-3 fw-bold">
-            JOIN US TODAY
-          </button>
+        
         </div>
       </div>
     </div>

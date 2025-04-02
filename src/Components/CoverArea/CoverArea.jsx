@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CoverArea.css';  
 import { IoLocationSharp } from "react-icons/io5";
+import location from '/src/assets/Images/Map.png'
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 const CoverArea = () => {
@@ -19,7 +20,7 @@ const CoverArea = () => {
                     {/* Left - Image & Text in Same Line */}
                     <div className="col-lg-6 d-flex align-items-center  justify-content-md-end justify-content-center my-3">
                         <img 
-                            src="/src/assets/Images/Map.png" 
+                            src={location} 
                             alt="Service Map" 
                             className="img-fluid rounded-3 shadow map-img me-3"
                             style={{ maxWidth: "70%" }} 

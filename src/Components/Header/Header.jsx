@@ -102,10 +102,8 @@ export default function Header() {
                 style={{ cursor: "pointer" }}
               />
               <FaInstagram className="fs-3" />
-              <button className="explore-btn">EXPLORE MENU</button>
             </div>
           </ul>
-
           {/* Icons (User & Cart) - Desktop */}
           <div className="header-icons">
             <FaWhatsapp  
@@ -113,8 +111,7 @@ export default function Header() {
               onClick={openWhatsApp}
               style={{ cursor: "pointer" }}
             />
-            <FaInstagram className="fs-3" />
-            <button className="explore-btn">EXPLORE MENU</button>
+            <FaInstagram className="fs-3" /> 
           </div>
 
           {/* Mobile Menu Button */}

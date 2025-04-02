@@ -47,7 +47,8 @@
 }
 
 .header-nav-links a:hover {
-  color: #ffeb3b;
+  color:#0a3d62;
+  text-decoration: none;
 }
 
 /* Icons */
@@ -94,7 +95,7 @@
 @media (max-width: 931px) {
   .header-nav-links {
     position: fixed;
-    top: 88px;
+    top: 70px;
     left: -100%;
     width: 60%;
     height: 100vh;
@@ -127,7 +128,8 @@
 
   .header-mobile-icons {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
     gap: 15px;
     font-size: 20px;
     color: white;
@@ -138,5 +140,12 @@
 }
 
 .header-logo{
-  height: 70px;
+  height: 50px;
+}
+
+.explore-btn{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  
 }

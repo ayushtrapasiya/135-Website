@@ -4,6 +4,7 @@ import "./WhyChoose.css";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import Aos from "aos";
 import "aos/dist/aos.css"; 
+import whyimage from '/src/assets/Images/fourth-seaction.jpg'
 const WhyChoose = () => {
     useEffect(() => {
             Aos.init({
@@ -66,7 +67,7 @@ const WhyChoose = () => {
         {/* Right Side */}
         <div className="col-lg-5 d-flex justify-content-center col-12 p-0" data-aos="fade-left">
           <img
-            src="/src/assets/Images/fourth-seaction.jpg"
+            src={whyimage}
             alt="Fruits & Juices"
             className="img-fluid why-image "
           />
