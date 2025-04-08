@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     text-align: center;
+ 
 }
 
 .menu-title {
@@ -27,10 +28,16 @@
 }
 
 .menu-column {
-    flex: 1;
-    min-width: 250px;
+    /* flex: 1; */
+    /* min-width: 250px; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
-
+.perent-menu{
+    gap: 15px;
+    
+}
 .menu-column h3 {
     font-size: 20px;
     font-weight: 600;
@@ -49,10 +56,12 @@
 }
 
 .item-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: white;
     border-radius: 10px;
+    background-position: center;
+    background-size: cover;
 }
 
 .menu-item h4 {

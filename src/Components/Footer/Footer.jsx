@@ -3,6 +3,7 @@ import "./Footer.css";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { ScrollLink } from "react-scroll";
+import logo from "/src/assets/Images/135LOGO.png"
 
 const Footer = () => {
   return (
@@ -10,7 +11,9 @@ const Footer = () => {
       <div className="footer-container">
         {/* Left Section - Logo & About (Takes More Space) */}
         <div className="footer-section about large-section ">
-          <img src="/src/assets/Images/135LOGO.png" alt="135 Degrees Logo" className="footer-logo" />
+          <Link to={"/"}>
+          <img src={logo} alt="135 Degrees Logo" className="footer-logo" />
+          </Link>
           <p className="footer-detail">
             At 135 Degrees, we believe that eating healthy should be easy, delicious, and hassle-free. Our journey began with a simple vision to provide fresh, hygienic, and professionally crafted food that fits seamlessly into your busy lifestyle.
           </p>
@@ -24,7 +27,6 @@ const Footer = () => {
           <p>  care@135degrees.in</p>
           <p><a href="https://www.135degrees.in" className="footer-link">www.135degrees.in</a></p>
         </div>
-
         {/* Right Section - Working Hours & Quick Links */}
         <div className="footer-section hours small-section flex-fill">
           <h5><FaClock className="footer-icon" /> Working Hours</h5>
@@ -35,16 +37,12 @@ const Footer = () => {
         <div className="footer-section links small-section">
           <h5>Quick Links</h5>
           <ul>
-            <Link to={"/"}>
-            <li className="text-light">Home</li>
+            <Link to={"/"} style={{textDecoration:"none"}}>
+            <li className="text-light" >Home</li>
             </Link>
-            <li><a href="#">About Us</a></li>
-            <li>
- 
-    Our Menu
-   
-</li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" style={{textDecoration:"none"}}>About Us</a></li>
+            <li><a href="#" style={{textDecoration:"none"}}>Our Menu</a></li>
+            <li><a href="#" style={{textDecoration:"none"}}>Contact Us</a></li>
           </ul>
         </div>
       </div>

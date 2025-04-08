@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll"; // Import from react-scroll
 import "./Header.css";
-
+import logo from "/src/assets/Images/135LOGO.png";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(""); // Track the active link
@@ -51,11 +51,14 @@ export default function Header() {
         <div className="header-nav-container">
           {/* Logo */}
           <div className="header-logo">
+            <Link to={"/"}>
             <img
-              src="/src/assets/Images/135LOGO.png"
+            style={{cursor:"pointer"}}
+              src={logo}
               alt="logo"
               className="header-logo"
             />
+            </Link>
           </div>
 
           {/* Navigation Links */}
@@ -70,6 +73,7 @@ export default function Header() {
                 smooth={true}
                 duration={500}
                 className={`${activeLink} === "about-us" ? "active" : ""`}
+                style={{cursor:"pointer"}}
               >
                 About Us
               </ScrollLink>
@@ -80,6 +84,7 @@ export default function Header() {
                 smooth={true}
                 duration={500}
                 className={activeLink === "our-menu" ? "active" : ""}
+                style={{cursor:"pointer"}}
               >
                 Our Menu
               </ScrollLink>
@@ -90,6 +95,7 @@ export default function Header() {
                 smooth={true}
                 duration={500}
                 className={activeLink === "contact" ? "active" : ""}
+                style={{cursor:"pointer"}}
               >
                 Contact
               </ScrollLink>
@@ -100,6 +106,7 @@ export default function Header() {
                 className="fs-3"
                 onClick={openWhatsApp}
                 style={{ cursor: "pointer" }}
+                
               />
               <FaInstagram className="fs-3" />
             </div>
