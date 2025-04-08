@@ -1,6 +1,9 @@
 import React, { useState, useRef } from 'react';
 import './OurMenu.css';
-
+import salad from "/src/assets/Images/salad.avif"
+import juice from "/src/assets/Images/juice.avif"
+import { SaladDetail } from '../AllItemData/AllItemData';
+ 
 const categories = ["Salads", "Juices", "Shakes"];
 
 const OurMenu = () => {
@@ -8,7 +11,7 @@ const OurMenu = () => {
     const [fade, setFade] = useState(true);
     const touchStartX = useRef(null);
     const touchEndX = useRef(null);
-
+    
     const handleMenu = (name) => {
         if (name === menuHead) return;
         triggerTransition(name);
@@ -60,7 +63,7 @@ const OurMenu = () => {
             <h2 className="menu-title text-light">Our Menu</h2>
             <p className="menu-subtitle">Wholesome Choices, Crafted for You</p>
             <div className='d-flex justify-content-around'>
-                {categories.map((cat) => (
+                {/* {categories.map((cat) => (
                     <h5
                         key={cat}
                         className={`fw-bold Menu-catagary-name ${menuHead === cat ? 'active-tab' : ''}`}
@@ -68,40 +71,41 @@ const OurMenu = () => {
                     >
                         {cat}
                     </h5>
-                ))}
+                ))} */}
+                <h3 className='fw-bold Menu-catagary-name active-tab'>Salad</h3>
             </div>
 
             {/* Content */}
-            <div className={`menu-grid mt-5 ${fade ? 'fade-in' : 'fade-out'}`}>
+            <div className={`perent-menu row d-flex justify-content-around mt-5 ${fade ? 'fade-in' : 'fade-out'}`}>
                 {menuHead === "Salads" &&     <>
-        <div className="menu-column " data-aos="fade-up">
-            {[...Array(4)].map((_, i) => (
+        <div className="menu-column col-lg-5 " data-aos="fade-up">
+            {SaladDetail.slice(0,8).map((v, i) => (
                 <div className="menu-item" key={i}>
-                   <img src="/src/assets/Images/salad.avif" alt="" srcset="" className='item-image' />
+                   <img src={v.image} alt="" srcset="" className='item-image' />
                     <div className='Item-heading'>
-                        <h4>Salads</h4>
-                        <p>Cucumber, Tomato, Onion, Cilantro, Carrot, Cabbage,<br /> Mint Leaves crafted with the Indian Spices</p>
+                        <h4>{v.name}</h4>
+                        <p>{v.items}</p>
                     </div>
                 </div>
             ))}
         </div>
-        <div className="menu-column" data-aos="fade-down">
-            {[...Array(4)].map((_, i) => (
+        <div className=" menu-column col-lg-5" data-aos="fade-down">
+            {SaladDetail.slice(8,16).map((v, i) => (
                 <div className="menu-item" key={i}>
-                   <img src="/src/assets/Images/salad.avif" alt="" srcset="" className='item-image' />
+                   <img src={v.image} alt="" srcset="" className='item-image' />
                     <div className='Item-heading'>
-                        <h4>Salads</h4>
-                        <p>Cucumber, Tomato, Onion, Cilantro, Carrot, Cabbage,<br /> Mint Leaves crafted with the Indian Spices</p>
+                        <h4>{v.name}</h4>
+                        <p>{v.items}</p>
                     </div>
                 </div>
             ))}
         </div>
     </>}
-                {menuHead === "Juices" &&     <>
+                {/* {menuHead === "Juices" &&     <>
         <div className="menu-column">
             {[...Array(4)].map((_, i) => (
                 <div className="menu-item" key={i}>
-                   <img src="/src/assets/Images/juice.avif" alt="" srcset="" className='item-image' />
+                   <img src={juice} alt="" srcset="" className='item-image' />
                     <div className='Item-heading'>
                         <h4>Juices</h4>
                         <p>Cucumber, Tomato, Onion, Cilantro, Carrot, Cabbage,<br /> Mint Leaves crafted with the Indian Spices</p>
@@ -112,7 +116,7 @@ const OurMenu = () => {
         <div className="menu-column">
             {[...Array(4)].map((_, i) => (
                 <div className="menu-item" key={i}>
-                   <img src="/src/assets/Images/juice.avif" alt="" srcset="" className='item-image' />
+                   <img src={juice} alt="" srcset="" className='item-image' />
                     <div className='Item-heading'>
                         <h4>Juices</h4>
                         <p>Cucumber, Tomato, Onion, Cilantro, Carrot, Cabbage,<br /> Mint Leaves crafted with the Indian Spices</p>
@@ -120,12 +124,12 @@ const OurMenu = () => {
                 </div>
             ))}
         </div>
-    </>}
-        {menuHead === "Shakes" &&<>
+    </>} */}
+        {/* {menuHead === "Shakes" &&<>
         <div className="menu-column">
             {[...Array(4)].map((_, i) => (
                 <div className="menu-item" key={i}>
-                   <img src="/src/assets/Images/salad.avif" alt="" srcset="" className='item-image' />
+                   <img src={salad} alt="" srcset="" className='item-image' />
                     <div className='Item-heading'>
                         <h4>Shakes</h4>
                         <p>Cucumber, Tomato, Onion, Cilantro, Carrot, Cabbage,<br /> Mint Leaves crafted with the Indian Spices</p>
@@ -136,7 +140,7 @@ const OurMenu = () => {
         <div className="menu-column">
             {[...Array(4)].map((_, i) => (
                 <div className="menu-item" key={i}>
-                   <img src="/src/assets/Images/salad.avif" alt="" srcset="" className='item-image' />
+                   <img src={salad} alt="" srcset="" className='item-image' />
                     <div className='Item-heading'>
                         <h4>Shakes</h4>
                         <p>Cucumber, Tomato, Onion, Cilantro, Carrot, Cabbage,<br /> Mint Leaves crafted with the Indian Spices</p>
@@ -144,7 +148,7 @@ const OurMenu = () => {
                 </div>
             ))}
         </div>
-    </> }
+    </> } */}
             </div>
         </section>
     );

@@ -9,13 +9,7 @@ const testimonials = [
         image: "https://amtechdesign.in/wp-content/uploads/2023/10/Anup-Parekh-About-Profile.jpg",
         rating: 5
     },
-    {
-        text: "Second testimonial comes here. This is also fully customizable and smooth.",
-        author: "John Doe",
-        position: "Founder, Example Inc.",
-        image: "https://amtechdesign.in/wp-content/uploads/2023/10/Anup-Parekh-About-Profile.jpg",
-        rating: 4
-    },{
+   {
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mi",
         author: "Anup Parekh",
         position: "CEO, NEXORA TECH",
