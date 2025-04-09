@@ -40,10 +40,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container contact-container mt-5">
+    <div className="container contact-container" style={{ marginTop: "35px" }}>
       <h2 className="text-center fw-bold Contact-Us">Contact Us</h2>
-      <div className="row d-flex contect-main justify-content-md-around">
-        <div className="col-md-5">
+      <div className="row d-flex contect-main justify-content-md-around ">
+        <div className="col-md-5 mt-1">
           {submitStatus && (
             <div className={`alert ${submitStatus.success ? "alert-success" : "alert-danger"} mb-3`}>
               {submitStatus.message}
@@ -68,34 +68,50 @@ const ContactForm = () => {
           </form>
         </div>
         <div className="col-md-5 contact-info col-11">
-          <div className="info-box p-3">
-            <p>
-              <IoLocation className="fs-2" /> &nbsp;&nbsp;D/45, Titanium City Center, 100 Feet Road, Satellite, Ahmedabad - 380 015.
-            </p>
-            <br />
-            <br />
-            <p>
-              <IoCall className="fs-2" /> &nbsp;&nbsp;
-              <a href="tel:+917863870341" style={{ textDecoration: "none", color: "white" }}>
-                ‪+91 78638 70341‬
-              </a>
-            </p>
-            <br />
-            <br />
-            <p>
-              <TbWorld className="fs-2" />&nbsp;&nbsp;
-              <a href="https://www.135degrees.in" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "white"}}>
-                www.135degrees.in
-              </a>
-            </p>
-            <br />
-            <br />
-            <p>
-              <MdEmail className="fs-2" />&nbsp;&nbsp;
-              <a href="mailto:care@135degrees.in" style={{ textDecoration: "none", color: "white" }}>
-                care@135degrees.in
-              </a>
-            </p>
+          <div className="info-box p-4 rounded ">
+
+
+            <div className="contact-item d-flex align-items-center mb-4  pt-4">
+              <div className="icon-wrapper me-3 border ">
+                <IoLocation className="fs-3 " />
+              </div>
+              <div className="contact-texts fs-5 ">
+                D/45, Titanium City Center, 100 Feet Road,<br />
+                Satellite, Ahmedabad - 380 015.
+              </div>
+            </div>
+            <div className="contact-item d-flex align-items-center mb-4 mx-auto mt-3">
+              <div className="icon-wrapper me-3">
+                <IoCall className="fs-3 " />
+              </div>
+              <div >
+                <a href="tel:+917863870341" className=" contact-texts text-decoration-none text-white fs-5">
+                  +91 78638 70341
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-item d-flex align-items-center mb-4 mx-auto mt-3">
+              <div className="icon-wrapper me-3">
+                <TbWorld className="fs-3 " />
+              </div>
+              <div>
+                <a href="https://www.135degrees.in" target="_blank" rel="noopener noreferrer" className="contact-texts text-decoration-none text-white fs-5">
+                  www.135degrees.in
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-item d-flex align-items-center mx-auto mt-3">
+              <div className="icon-wrapper me-3">
+                <MdEmail className="fs-3 " />
+              </div>
+              <div className="contact-texts">
+                <a href="mailto:care@135degrees.in" className="contact-texts text-decoration-none text-white fs-5">
+                  care@135degrees.in
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

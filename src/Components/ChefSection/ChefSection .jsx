@@ -10,7 +10,7 @@ const ChefSection = () => {
               });
             }, []);
   return (
-    <div className="container my-5">
+    <div className="container " style={{ marginTop: "35px" }}>
       <div className="row d-flex justify-content-senter align-items-center">
         {/* Left side */}
         <div className="col-lg-6 d-flex justify-content-center mb-4 mt-5 mb-lg-0" data-aos="fade-up">

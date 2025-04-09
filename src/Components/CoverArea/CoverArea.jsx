@@ -12,7 +12,8 @@ const CoverArea = () => {
         });
       }, []);
     return (
-        <div className="areas-section py-5 px-3">
+        <div className="areas-section py-5 px-3 "
+            style={{ marginTop: "35px" }} >
             <div className="container ">
                 <h2 className="fw-bold text-center text-light m-0"  data-aos="fade-up">Areas We Cover</h2>
                 <p className="m-0 fw-semibold text-center">Serving Your Area with Care and Precision</p>

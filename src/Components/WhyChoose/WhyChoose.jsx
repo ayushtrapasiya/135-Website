@@ -12,7 +12,7 @@ const WhyChoose = () => {
             });
           }, []);
   return (
-    <div className="main-why-ontainer">
+    <div className="main-why-ontainer ">
     <div className="why-container container my-5 d-flex justify-content-center">
       <div className="row   rounded-4 overflow-hidden why-container-detail">
         <div className="col-lg-5 col-12 p-4 why-text-side"  data-aos="fade-right">

@@ -1,4 +1,4 @@
-.contect-us-input{
+.contect-us-input {
     border: 2px solid #003366;
     background-color: transparent;
     color: #003366;
@@ -19,8 +19,20 @@
 
  .Contact-Us{
     color: #003366 !important;
- }
-@media (max-width:768px){
+}
+
+.icon-wrapper {
+    height: 40px;
+    width: 40px;
+    color: #003366 !important;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+@media (max-width:768px) {
     .contact-info {
         margin-top: 15px;
         position: relative;
@@ -28,5 +40,9 @@
 margin-top: 40px !important;
         transform: translate(-50%);
     }
-  
+
+    .contact-texts {
+        font-size: 16.39px !important;
+        color: white !important;
+    }
 }

@@ -7,12 +7,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #000103;
+    background-color: #0b254580;
+    /* Dark blue background as in Image 2 */
     position: relative;
     z-index: 1;
 }
 
-/* Add an overlay */
+/* Add a blue overlay */
 .testimonial-section::before {
     content: "";
     position: absolute;
@@ -20,51 +21,59 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    background: rgba(11, 37, 69, 0.8);
+    /* Dark blue overlay as in Image 2 */
     z-index: -1;
 }
 
-.testimonial-card {
-    position: relative;
-    z-index: 2; /* Ensure testimonial content stays above overlay */
-}
-
 h2 {
-    /* color: #0B2545; */
     color: white;
     font-size: 2.5rem;
     margin-bottom: 30px;
+    font-weight: 600;
 }
 
 .testimonial-card {
-    background: rgba(239, 235, 235, 0.489);
-    backdrop-filter: blur(20px);
+    background: rgba(245, 245, 245, 0.5);
+    backdrop-filter: blur(10px);
     border-radius: 25px;
-    padding: 30px;
+    padding: 40px;
     max-width: 900px;
     width: 90%;
-    color: #0B2545;
+    color: #003366;
     position: relative;
-    height: 400px;
-}
-
-.testimonial-card h1 {
-    font-size: 50px;
-    color: #0d1b2a;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .testimonial-card p {
     line-height: 1.7;
     font-size: 1.1rem;
-    color: #0B2545;
+    color: #003366;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.quote-icon {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 10rem;
+    color: #003366a7;
+    opacity: 1;
 }
 
 .testimonial-footer {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 30px;
+    margin-top: auto;
+    text-align: left;
 }
 
 .testimonial-footer img {
@@ -73,65 +82,83 @@ h2 {
     border-radius: 50%;
     margin-right: 15px;
     border: 2px solid white;
+    object-fit: cover;
 }
 
-.testimonial-footer h4 {
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+.testimonial-author h4 {
     margin: 0;
+    color: #003366;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.testimonial-footer small {
-    opacity: 0.8;
+.testimonial-author small {
+    color: #003366;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
 .stars {
+    margin-top: -13px;
     color: gold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
 }
 
-.TestimonialsCarousel-dots {
-    margin-top: 15px;
-    position: fixed;
-    right: 30px;
-    top: 300px;
+.star {
+    color: rgba(255, 255, 255, 0.3);
 }
 
-.TestimonialsCarousel-dots span {
+.star.filled {
+    color: #003366;
+}
+
+.testimonials-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials-dots span {
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 5px;
-    background: #0B2545;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.TestimonialsCarousel-dots span.active {
-    background: #0B2545;
-    width: 13px;
-    height: 13px;
+.testimonials-dots span.active {
+    background: #fff;
+    width: 12px;
+    height: 12px;
 }
 
 @media (max-width: 768px) {
     .testimonial-card {
-        padding: 20px;
+        padding: 30px 20px;
     }
-    .TestimonialsCarousel-dots {
-        margin-top: 15px;
-        position: fixed;
-        right: 100px;
-        top: 355px;
-        bottom: -10px;
-    }
+
     h2 {
         font-size: 2rem;
     }
 
-    .testimonial-card h1 {
-        font-size: 40px;
-    }
-
     .testimonial-card p {
         font-size: 1rem;
+    }
+
+    .quote-icon {
+        font-size: 2.5rem;
+        top: 30px;
+        left: 20px;
     }
 }

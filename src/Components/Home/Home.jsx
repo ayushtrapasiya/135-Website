@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
 import "./Home.css";
 import video1 from "/src/assets/Video/second-slide-video.mp4";
 import video2 from "/src/assets/Video/firstvideo.mp4";
@@ -18,19 +19,19 @@ const slides = [
     video: video1,
     heading: "Welcome To 135 Degrees",
     subheading: "Where Freshness Meets Professionalism!",
-    text: "At 135 Degrees, We Bring You A Perfect Blend Of Health, Hygiene, And Taste With Our Carefully Crafted Salads, Juices, And Shakes.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, alias quaerat? Unde earum accusantium fuga sequi aut laborum officiis, officia doloremque vel vero optio nostrum architecto voluptatibus? Vitae, eum dicta.",
+    text: "At 135 Degrees, we specialize in delivering fresh Salads, Juices, and Shakes to offices – crafted for health, delivered with speed, and served with hygiene.Boost your team's energy and wellness with our professional, on-time delivery of nutritious choices.From boardrooms to breakrooms, we bring healthy indulgence right to your workplace.",
   },
   {
     video: video2,
     heading: "Experience the Best Quality",
     subheading: "Healthy & Delicious Choices",
-    text: "We take pride in offering a variety of nutritious and tasty meals made with fresh ingredients to keep you energized all day.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, alias quaerat? Unde earum accusantium fuga sequi aut laborum officiis, officia doloremque vel vero optio nostrum architecto voluptatibus? Vitae, eum dicta.",
+    text: "Refresh your day with 135 Degrees – delivering fresh Salads, Juices, and Shakes straight to your office with a promise of hygiene and health.Choose from a variety of nutritious options crafted to fuel your workday – tasty, energizing, and always on time.Experience instant delivery of wholesome meals designed for corporate wellness and convenience.",
   },
   {
     video: video3,
     heading: "Experience the Best Quality",
-    subheading: "Healthy & Delicious Choices",
-    text: "We take pride in offering a variety of nutritious and tasty meals made with fresh ingredients to keep you energized all day.Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, alias quaerat? Unde earum accusantium fuga sequi aut laborum officiis, officia doloremque vel vero optio nostrum architecto voluptatibus? Vitae, eum dicta.",
+    subheading: "Your Daily Dose of Freshness Starts Here",
+    text: "From crisp salads to refreshing juices and creamy shakes, 135 Degrees brings you wholesome, hygienic options prepared with care. We make healthy living simple, delicious, and just a click away.",
   },
 ];
 
@@ -46,7 +47,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="carousel-container animate__animated animate__fadeInDown p-5 ">
+      <div className="carousel-container animate__animated animate__fadeInDown p-5">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -63,6 +64,15 @@ export default function Home() {
               <h4 className="text-light">{slide.heading}</h4>
               <h2 className="fw-bold text-light">{slide.subheading}</h2>
               <p>{slide.text}</p>
+              <ScrollLink
+                to="our-menu"
+                smooth={true}
+                duration={800}
+                offset={-80}
+                className="explore-menu-btn"
+              >
+                EXPLORE MENU
+              </ScrollLink>
             </div>
           </div>
         ))}

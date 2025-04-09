@@ -8,6 +8,12 @@
   transition: all 0.3s ease-in-out;
 }
 
+.header-nav-links .nav-button:hover {
+  color: #0a3d62;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .header-nav-container {
   display: flex;
   justify-content: space-between;
@@ -35,9 +41,11 @@
 .header-nav-links li {
   display: inline;
 }
+
 .black {
   background-color: black;
 }
+
 .header-nav-links a {
   color: white;
   text-decoration: none;
@@ -47,8 +55,27 @@
 }
 
 .header-nav-links a:hover {
-  color:#0a3d62;
+  color: #0a3d62;
   text-decoration: none;
+}
+
+/* Add this to your Header.css file */
+.nav-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer !important;
+  padding: 0;
+  text-align: left;
+}
+
+/* If you have styling for your links, you might want to apply similar styling to the buttons */
+.header-nav-links li .nav-button {
+  /* Add your link styling here */
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Icons */
@@ -86,6 +113,7 @@
 .header-mobile-icons {
   display: none;
 }
+
 .header-icons {
   display: flex;
   align-items: center;
@@ -114,7 +142,8 @@
 
   .header-nav-links.header-active {
     left: 0;
-  }   
+  }
+
   .header-menu-btn {
     display: block;
     position: relative;
@@ -139,13 +168,13 @@
   }
 }
 
-.header-logo{
+.header-logo {
   height: 50px;
 }
 
-.explore-btn{
+.explore-btn {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  
+
 }
