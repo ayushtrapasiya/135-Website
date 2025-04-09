@@ -12,13 +12,13 @@ import CustomCursor from './Components/CustomCursor';
 export default function App() {
   return (
     <div className='main'> 
-    <div style={{ cursor: "none" }}>
-    <CustomCursor />
+    {/* <div style={{ cursor: "none" }}> */}
+    {/* <CustomCursor /> */}
       <ScrollToTop />
       <Header/>
       <Outlet/>   
       <Footer/>
-      </div>
+      {/* </div> */}
     </div>
   )
 }

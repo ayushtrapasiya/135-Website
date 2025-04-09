@@ -63,7 +63,6 @@ const Footer = () => {
           <p>care@135degrees.in</p>
           <p><a href="https://www.135degrees.in" className="footer-link">www.135degrees.in</a></p>
         </div>
-
         {/* Right Section - Working Hours & Quick Links */}
         <div className="footer-section hours small-section flex-fill">
           <h5 className="footer-icon">Working Hours</h5>

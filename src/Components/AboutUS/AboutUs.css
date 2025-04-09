@@ -3,6 +3,7 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     background-image: url('/src/assets/Images/About-right.png');
+ 
     background-size: cover;
     background-position: center;
 }

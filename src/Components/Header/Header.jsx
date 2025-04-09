@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import "./Header.css";
-
+import logo from "/src/assets/Images/135LOGO.png";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
@@ -163,6 +163,7 @@ export default function Header() {
                 className="fs-3"
                 onClick={openWhatsApp}
                 style={{ cursor: "pointer" }}
+                
               />
               <FaInstagram className="fs-3" />
             </div>
